@@ -27,22 +27,26 @@ public class ProducerDemo {
         properties.put("acks", "all");
 
         KafkaProducer<String, DeliveryMessage> producer = new KafkaProducer<>(properties);
-        String orderID = "order-1";
-        DeliveryMessage msg = new DeliveryMessage(orderID, DeliveryStatus.DELIVERED);
-        ProducerRecord<String, DeliveryMessage> record = new ProducerRecord<>("deliveries", orderID, msg);
-  /*
+        String orderID = "order-2";
+        /*
         Future<RecordMetadata> future = producer.send(record);
         RecordMetadata metaData = future.get();
         System.out.println("record details topic=" + metaData.topic() + "-partition=" + metaData.partition() + "-offset=" + metaData.offset());
 */
-        producer.send(record,(metaData,exception)->{
-           if(exception!=null){
-             Log.error("exception in sending message-getting metadata",exception);
-               return ;
-           }
-            Log.info("record details topic="+metaData.topic()+"-"+metaData.partition()+"-"+metaData.offset());
 
-        });
+
+        for (DeliveryStatus status:DeliveryStatus.values()){
+            DeliveryMessage msg = new DeliveryMessage(orderID, status);
+            ProducerRecord<String, DeliveryMessage> record = new ProducerRecord<>("deliveries", orderID, msg);
+            producer.send(record,(metaData,exception)->{
+                if(exception!=null){
+                    Log.error("exception in sending message-getting metadata",exception);
+                    return ;
+                }
+                Log.info("record details topic="+metaData.topic()+"-"+metaData.partition()+"-"+metaData.offset());
+
+            });
+        }
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             Log.info("****producer exiting");
