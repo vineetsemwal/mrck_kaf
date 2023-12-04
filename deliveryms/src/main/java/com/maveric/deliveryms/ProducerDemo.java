@@ -37,20 +37,20 @@ public class ProducerDemo {
 */
         producer.send(record,(metaData,exception)->{
            if(exception!=null){
-              exception.printStackTrace();
+             Log.error("exception in sending message-getting metadata",exception);
                return ;
            }
-            System.out.println("record details topic="+metaData.topic()+"-"+metaData.partition()+"-"+metaData.offset());
+            Log.info("record details topic="+metaData.topic()+"-"+metaData.partition()+"-"+metaData.offset());
 
         });
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.out.println("****producer exiting");
+            Log.info("****producer exiting");
             producer.close();
         }));
 
         producer.close();
-        System.out.println("bye");
+        Log.info("bye");
     }
 }
 
