@@ -1,0 +1,2 @@
+2023-12-04 16:13:47,083 [main] ERROR    com.maveric.deliveryms.ProducerDemo - exception in metadata
+org.apache.kafka.common.errors.UnsupportedVersionException: The broker does not support METADATA
