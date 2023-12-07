@@ -25,7 +25,7 @@ public class ProducerDemo {
         try(
         KafkaProducer<String, DeliveryMessage> producer = new KafkaProducer<>(properties);
         ) {
-            String orderID = "order8";
+            String orderID = "order9";
         /*
         Future<RecordMetadata> future = producer.send(record);
         RecordMetadata metaData = future.get();
@@ -35,7 +35,7 @@ public class ProducerDemo {
 
             for (DeliveryStatus status : DeliveryStatus.values()) {
                 DeliveryMessage msg = new DeliveryMessage(orderID, status);
-                ProducerRecord<String, DeliveryMessage> record = new ProducerRecord<>("deliveries2", orderID, msg);
+                ProducerRecord<String, DeliveryMessage> record = new ProducerRecord<>("deliveries", orderID, msg);
                 producer.send(record, (metaData, exception) -> {
                     if (exception != null) {
                         Log.error("exception in sending message-getting metadata", exception);

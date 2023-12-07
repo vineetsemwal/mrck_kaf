@@ -1,5 +1,6 @@
 package com.maveric.deliveryms;
 
+import kafka.server.KafkaConfig;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -19,7 +20,7 @@ public class EmailConsumerDemo {
         System.out.println("***properties="+properties);
 
         try(KafkaConsumer<String,DeliveryMessage>consumer=new KafkaConsumer<>(properties)){
-            consumer.subscribe(List.of("deliveries2"));
+            consumer.subscribe(List.of("deliveries"));
             while (true) {
                 ConsumerRecords<String, DeliveryMessage> records = consumer.poll(Duration.ofMillis(200));
                 Log.info("*****records fetched="+records.count());
@@ -30,7 +31,7 @@ public class EmailConsumerDemo {
                     sendMail(value);
 
                 }
-                Thread.sleep(1000);
+                Thread.sleep(5000);
             }
 
         }
