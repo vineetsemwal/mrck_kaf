@@ -1,0 +1,1211 @@
+2023-12-07 16:01:08,368 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-email-group-2-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = email-group-2
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.maveric.deliveryms.DeliveryMessageDeserializer
+
+2023-12-07 16:01:08,645 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:01:08,645 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:01:08,646 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701945068616
+2023-12-07 16:01:08,660 [main] INFO     org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-email-group-2-1, groupId=email-group-2] Subscribed to topic(s): deliveries
+2023-12-07 16:01:09,017 [main] INFO     org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-email-group-2-1, groupId=email-group-2] Node -2 disconnected.
+2023-12-07 16:01:09,020 [main] WARN     org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-email-group-2-1, groupId=email-group-2] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 16:01:09,021 [main] WARN     org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-email-group-2-1, groupId=email-group-2] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 16:01:09,033 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:01:09,038 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-2-1, groupId=email-group-2] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-07 16:01:09,038 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-2-1, groupId=email-group-2] Request joining group due to: consumer pro-actively leaving the group
+2023-12-07 16:01:09,041 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:01:09,041 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:01:09,041 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:01:09,046 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-email-group-2-1 unregistered
+2023-12-07 16:03:52,989 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-email-group-2-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = email-group-2
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.maveric.deliveryms.DeliveryMessageDeserializer
+
+2023-12-07 16:03:53,343 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:03:53,343 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:03:53,343 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701945233318
+2023-12-07 16:03:53,352 [main] INFO     org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-email-group-2-1, groupId=email-group-2] Subscribed to topic(s): deliveries2
+2023-12-07 16:03:53,720 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:03:53,723 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-2-1, groupId=email-group-2] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-07 16:03:53,723 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-2-1, groupId=email-group-2] Request joining group due to: consumer pro-actively leaving the group
+2023-12-07 16:03:53,726 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:03:53,727 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:03:53,727 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:03:53,733 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-email-group-2-1 unregistered
+2023-12-07 16:08:46,551 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-email-group-3-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = email-group-3
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.maveric.deliveryms.DeliveryMessageDeserializer
+
+2023-12-07 16:08:46,860 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:08:46,861 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:08:46,862 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701945526836
+2023-12-07 16:08:46,875 [main] INFO     org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Subscribed to topic(s): deliveries2
+2023-12-07 16:08:47,269 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:08:47,272 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-12-07 16:08:47,273 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Request joining group due to: consumer pro-actively leaving the group
+2023-12-07 16:08:47,276 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:08:47,276 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:08:47,277 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:08:47,283 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-email-group-3-1 unregistered
+2023-12-07 16:12:37,974 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-email-group-3-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = email-group-3
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.maveric.deliveryms.DeliveryMessageDeserializer
+
+2023-12-07 16:12:38,338 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:12:38,338 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:12:38,339 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701945758326
+2023-12-07 16:12:38,345 [main] INFO     org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Subscribed to topic(s): deliveries2
+2023-12-07 16:12:38,705 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:39,856 [main] INFO     org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:12:39,857 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Discovered group coordinator MAVHP122044.mavericsystems.lan:9092 (id: 2147483647 rack: null)
+2023-12-07 16:12:39,863 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] (Re-)joining group
+2023-12-07 16:12:39,876 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Request joining group due to: need to re-join with the given member-id: consumer-email-group-3-1-24427ed2-20ac-411b-a134-a9ad097e4633
+2023-12-07 16:12:39,876 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-12-07 16:12:39,877 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] (Re-)joining group
+2023-12-07 16:12:39,879 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Successfully joined group with generation Generation{generationId=1, memberId='consumer-email-group-3-1-24427ed2-20ac-411b-a134-a9ad097e4633', protocol='range'}
+2023-12-07 16:12:39,888 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Finished assignment for group at generation 1: {consumer-email-group-3-1-24427ed2-20ac-411b-a134-a9ad097e4633=Assignment(partitions=[deliveries2-0])}
+2023-12-07 16:12:39,896 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Successfully synced group in generation Generation{generationId=1, memberId='consumer-email-group-3-1-24427ed2-20ac-411b-a134-a9ad097e4633', protocol='range'}
+2023-12-07 16:12:39,897 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Notifying assignor about the new Assignment(partitions=[deliveries2-0])
+2023-12-07 16:12:39,900 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Adding newly assigned partitions: deliveries2-0
+2023-12-07 16:12:39,909 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Found no committed offset for partition deliveries2-0
+2023-12-07 16:12:39,923 [main] INFO     org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-email-group-3-1, groupId=email-group-3] Resetting offset for partition deliveries2-0 to position FetchPosition{offset=9, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[MAVHP122044.mavericsystems.lan:9092 (id: 0 rack: null)], epoch=0}}.
+2023-12-07 16:12:39,931 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:41,137 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:42,341 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:43,566 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:44,781 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:45,993 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:47,212 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:48,426 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:49,641 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:50,850 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:52,063 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:53,277 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:54,492 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:55,707 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:56,937 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:58,151 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:12:59,366 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:00,582 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:01,800 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:03,014 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:04,230 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:05,445 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:06,660 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:07,871 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:09,101 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:10,318 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:11,531 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:12,742 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:13,968 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:15,177 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:16,389 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:17,603 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:18,817 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:20,031 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:21,248 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:22,461 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:23,695 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:24,924 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:26,138 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:27,350 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:28,566 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:29,797 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:31,012 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:32,220 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:37,868 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-email-group-5-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = email-group-5
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.maveric.deliveryms.DeliveryMessageDeserializer
+
+2023-12-07 16:13:38,229 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:13:38,229 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:13:38,229 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701945818216
+2023-12-07 16:13:38,234 [main] INFO     org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] Subscribed to topic(s): deliveries2
+2023-12-07 16:13:38,606 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:39,764 [main] INFO     org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:13:39,765 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] Discovered group coordinator MAVHP122044.mavericsystems.lan:9092 (id: 2147483647 rack: null)
+2023-12-07 16:13:39,771 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] (Re-)joining group
+2023-12-07 16:13:39,784 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] Request joining group due to: need to re-join with the given member-id: consumer-email-group-5-1-4dad3ea0-257d-401a-bbb2-8b966778621a
+2023-12-07 16:13:39,785 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-12-07 16:13:39,785 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] (Re-)joining group
+2023-12-07 16:13:39,787 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] Successfully joined group with generation Generation{generationId=1, memberId='consumer-email-group-5-1-4dad3ea0-257d-401a-bbb2-8b966778621a', protocol='range'}
+2023-12-07 16:13:39,800 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] Finished assignment for group at generation 1: {consumer-email-group-5-1-4dad3ea0-257d-401a-bbb2-8b966778621a=Assignment(partitions=[deliveries2-0])}
+2023-12-07 16:13:39,809 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] Successfully synced group in generation Generation{generationId=1, memberId='consumer-email-group-5-1-4dad3ea0-257d-401a-bbb2-8b966778621a', protocol='range'}
+2023-12-07 16:13:39,809 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] Notifying assignor about the new Assignment(partitions=[deliveries2-0])
+2023-12-07 16:13:39,815 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] Adding newly assigned partitions: deliveries2-0
+2023-12-07 16:13:39,825 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] Found no committed offset for partition deliveries2-0
+2023-12-07 16:13:39,834 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:40,257 [kafka-coordinator-heartbeat-thread | email-group-5] INFO     org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-email-group-5-1, groupId=email-group-5] Resetting offset for partition deliveries2-0 to position FetchPosition{offset=9, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[MAVHP122044.mavericsystems.lan:9092 (id: 0 rack: null)], epoch=0}}.
+2023-12-07 16:13:41,041 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:42,260 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:43,474 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:44,691 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:45,901 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:47,113 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:48,335 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:49,548 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:50,763 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:51,973 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:53,186 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:54,402 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:55,614 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:56,825 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:58,031 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:13:59,242 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:00,469 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:01,681 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:02,898 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:04,113 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:05,328 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:06,545 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:07,762 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:08,978 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:10,193 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:11,407 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:12,623 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:13,835 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:15,050 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:16,258 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:17,487 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:14:40,830 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-null-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = null
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.maveric.deliveryms.DeliveryMessageDeserializer
+
+2023-12-07 16:14:41,210 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:14:41,210 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:14:41,210 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701945881197
+2023-12-07 16:14:41,219 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:14:41,220 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:14:41,220 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:14:41,225 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-null-1 unregistered
+2023-12-07 16:15:53,675 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-email-group-6-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = email-group-6
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.maveric.deliveryms.DeliveryMessageDeserializer
+
+2023-12-07 16:15:54,010 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:15:54,010 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:15:54,010 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701945953995
+2023-12-07 16:15:54,015 [main] INFO     org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] Subscribed to topic(s): deliveries2
+2023-12-07 16:15:54,383 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:15:55,536 [main] INFO     org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:15:55,537 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] Discovered group coordinator MAVHP122044.mavericsystems.lan:9092 (id: 2147483647 rack: null)
+2023-12-07 16:15:55,546 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] (Re-)joining group
+2023-12-07 16:15:55,558 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] Request joining group due to: need to re-join with the given member-id: consumer-email-group-6-1-b5def088-45a8-4310-9538-5578c929fad5
+2023-12-07 16:15:55,558 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-12-07 16:15:55,558 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] (Re-)joining group
+2023-12-07 16:15:55,561 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] Successfully joined group with generation Generation{generationId=1, memberId='consumer-email-group-6-1-b5def088-45a8-4310-9538-5578c929fad5', protocol='range'}
+2023-12-07 16:15:55,572 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] Finished assignment for group at generation 1: {consumer-email-group-6-1-b5def088-45a8-4310-9538-5578c929fad5=Assignment(partitions=[deliveries2-0])}
+2023-12-07 16:15:55,579 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] Successfully synced group in generation Generation{generationId=1, memberId='consumer-email-group-6-1-b5def088-45a8-4310-9538-5578c929fad5', protocol='range'}
+2023-12-07 16:15:55,579 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] Notifying assignor about the new Assignment(partitions=[deliveries2-0])
+2023-12-07 16:15:55,582 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] Adding newly assigned partitions: deliveries2-0
+2023-12-07 16:15:55,591 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] Found no committed offset for partition deliveries2-0
+2023-12-07 16:15:55,599 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:15:55,798 [kafka-coordinator-heartbeat-thread | email-group-6] INFO     org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-email-group-6-1, groupId=email-group-6] Resetting offset for partition deliveries2-0 to position FetchPosition{offset=9, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[MAVHP122044.mavericsystems.lan:9092 (id: 0 rack: null)], epoch=0}}.
+2023-12-07 16:15:56,828 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:15:58,039 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:15:59,255 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:00,471 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:01,689 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:02,905 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:04,121 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:05,339 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:06,569 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:07,784 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:09,000 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:10,214 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:11,425 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:12,633 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:13,850 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:15,062 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:16,271 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:17,486 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:18,698 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:19,906 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:21,122 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:22,338 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:23,555 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:24,770 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:25,979 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:27,197 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:28,406 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:29,622 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:30,835 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:32,049 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:33,266 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:34,484 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:35,696 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:36,907 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:38,114 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:39,327 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:40,543 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:41,756 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:42,988 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:44,201 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:45,415 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:46,639 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:47,853 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:49,065 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:50,279 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:51,492 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:52,709 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:53,923 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:55,144 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:56,358 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:57,572 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:58,785 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:16:59,994 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:01,211 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:02,420 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:03,632 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:04,835 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:06,052 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:07,265 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:08,480 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:09,697 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:10,913 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:12,126 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:13,341 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:14,557 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:15,771 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:16,997 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:18,212 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:19,427 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:20,644 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:21,856 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:23,073 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:24,284 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:25,511 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:26,727 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:27,943 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:29,173 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:30,386 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:31,598 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:32,813 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:34,028 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:35,238 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:36,458 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:37,670 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:38,884 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:40,097 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:41,310 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:42,523 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:43,728 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:44,941 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:46,159 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:47,372 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:48,587 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:49,797 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:51,009 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:52,220 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:53,435 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:54,651 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:55,865 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:57,078 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:17:58,294 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:04,220 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = c1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = email-group-6
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.maveric.deliveryms.DeliveryMessageDeserializer
+
+2023-12-07 16:18:04,550 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:18:04,550 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:18:04,551 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701946084540
+2023-12-07 16:18:04,554 [main] INFO     org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=c1, groupId=email-group-6] Subscribed to topic(s): deliveries2
+2023-12-07 16:18:04,937 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:06,086 [main] INFO     org.apache.kafka.clients.Metadata - [Consumer clientId=c1, groupId=email-group-6] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:18:06,087 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-6] Discovered group coordinator MAVHP122044.mavericsystems.lan:9092 (id: 2147483647 rack: null)
+2023-12-07 16:18:06,094 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-6] (Re-)joining group
+2023-12-07 16:18:06,106 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-6] Request joining group due to: need to re-join with the given member-id: c1-d7d25104-335a-49a4-808a-d6ee99e31f5e
+2023-12-07 16:18:06,106 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-6] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-12-07 16:18:06,106 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-6] (Re-)joining group
+2023-12-07 16:18:06,148 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:07,361 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:08,574 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:09,787 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:10,993 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:12,207 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:13,424 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:14,636 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:15,851 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:17,066 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:18,280 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:19,492 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:20,702 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:21,932 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:23,140 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:24,353 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:25,566 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:26,781 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:27,996 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:29,211 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:30,425 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:31,640 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:32,856 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:34,069 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:35,286 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:36,497 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:37,725 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:38,937 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:40,150 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:41,362 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:42,375 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-6] Successfully joined group with generation Generation{generationId=2, memberId='c1-d7d25104-335a-49a4-808a-d6ee99e31f5e', protocol='range'}
+2023-12-07 16:18:42,397 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-6] Finished assignment for group at generation 2: {c1-d7d25104-335a-49a4-808a-d6ee99e31f5e=Assignment(partitions=[deliveries2-0])}
+2023-12-07 16:18:42,409 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-6] Successfully synced group in generation Generation{generationId=2, memberId='c1-d7d25104-335a-49a4-808a-d6ee99e31f5e', protocol='range'}
+2023-12-07 16:18:42,410 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-6] Notifying assignor about the new Assignment(partitions=[deliveries2-0])
+2023-12-07 16:18:42,415 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-6] Adding newly assigned partitions: deliveries2-0
+2023-12-07 16:18:42,431 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-6] Setting offset for partition deliveries2-0 to the committed offset FetchPosition{offset=9, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[MAVHP122044.mavericsystems.lan:9092 (id: 0 rack: null)], epoch=0}}
+2023-12-07 16:18:42,478 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=6
+2023-12-07 16:18:42,479 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:18:42,479 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DISPATCHED
+2023-12-07 16:18:42,479 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:18:42,479 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-OUT_FOR_DELIVERY
+2023-12-07 16:18:42,479 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:18:42,479 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DELIVERED
+2023-12-07 16:18:42,479 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:18:42,480 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DISPATCHED
+2023-12-07 16:18:42,480 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:18:42,480 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-OUT_FOR_DELIVERY
+2023-12-07 16:18:42,480 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:18:42,480 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DELIVERED
+2023-12-07 16:18:43,685 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:44,901 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:46,114 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:47,329 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:18:48,543 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:08,533 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = c1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = email-group-7
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.maveric.deliveryms.DeliveryMessageDeserializer
+
+2023-12-07 16:22:08,877 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:22:08,877 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:22:08,877 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701946328864
+2023-12-07 16:22:08,882 [main] INFO     org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=c1, groupId=email-group-7] Subscribed to topic(s): deliveries2
+2023-12-07 16:22:09,240 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:10,371 [main] INFO     org.apache.kafka.clients.Metadata - [Consumer clientId=c1, groupId=email-group-7] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:22:10,372 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-7] Discovered group coordinator MAVHP122044.mavericsystems.lan:9092 (id: 2147483647 rack: null)
+2023-12-07 16:22:10,379 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-7] (Re-)joining group
+2023-12-07 16:22:10,391 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-7] Request joining group due to: need to re-join with the given member-id: c1-74550803-45fc-4579-9c90-88b13f641184
+2023-12-07 16:22:10,391 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-7] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-12-07 16:22:10,391 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-7] (Re-)joining group
+2023-12-07 16:22:10,447 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:11,458 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-7] Successfully joined group with generation Generation{generationId=2, memberId='c1-74550803-45fc-4579-9c90-88b13f641184', protocol='range'}
+2023-12-07 16:22:11,463 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-7] Successfully synced group in generation Generation{generationId=2, memberId='c1-74550803-45fc-4579-9c90-88b13f641184', protocol='range'}
+2023-12-07 16:22:11,469 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-7] Notifying assignor about the new Assignment(partitions=[deliveries2-0])
+2023-12-07 16:22:11,477 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-7] Adding newly assigned partitions: deliveries2-0
+2023-12-07 16:22:11,494 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=c1, groupId=email-group-7] Setting offset for partition deliveries2-0 to the committed offset FetchPosition{offset=21, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[MAVHP122044.mavericsystems.lan:9092 (id: 0 rack: null)], epoch=0}}
+2023-12-07 16:22:11,661 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:12,877 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:14,104 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:15,320 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:16,530 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:17,739 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:18,956 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:20,172 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0

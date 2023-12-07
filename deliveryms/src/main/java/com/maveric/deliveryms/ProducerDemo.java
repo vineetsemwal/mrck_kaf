@@ -20,12 +20,12 @@ public class ProducerDemo {
 
     public static void main(String[] args) throws Exception {
         System.out.println("****starting kafka client");
-        Properties properties = KafkaPropertiesReader.read("remote_producer.properties");
+        Properties properties = KafkaPropertiesReader.read("application.properties");
       Log.info("*****properties"+properties);
         try(
         KafkaProducer<String, DeliveryMessage> producer = new KafkaProducer<>(properties);
         ) {
-            String orderID = "order5";
+            String orderID = "order8";
         /*
         Future<RecordMetadata> future = producer.send(record);
         RecordMetadata metaData = future.get();

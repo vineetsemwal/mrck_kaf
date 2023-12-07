@@ -7472,3 +7472,2632 @@ org.apache.kafka.common.errors.UnsupportedVersionException: The broker does not 
 2023-12-06 15:55:15,064 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
 2023-12-06 15:55:15,065 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
 2023-12-06 15:55:15,067 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 15:49:55,944 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 15:49:55,987 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 15:49:56,033 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 15:49:56,314 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 15:49:56,319 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 15:49:56,321 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 15:49:56,321 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701944396315
+2023-12-07 15:49:56,844 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 15:49:56,846 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 5 with epoch 0
+2023-12-07 15:49:56,862 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 15:49:56,893 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-0
+2023-12-07 15:49:56,893 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-1
+2023-12-07 15:49:56,893 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-2
+2023-12-07 15:49:56,900 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 15:49:56,900 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 15:49:56,900 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 15:49:56,901 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 15:49:56,901 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 15:49:56,902 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 15:54:13,546 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 15:54:13,582 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 15:54:13,627 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 15:54:13,849 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 15:54:13,853 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 15:54:13,853 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 15:54:13,854 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701944653849
+2023-12-07 15:54:14,205 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 15:54:14,208 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 15:54:14,208 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 15:54:14,369 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 15:54:14,371 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 6 with epoch 0
+2023-12-07 15:54:14,387 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 15:54:14,417 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-0-0
+2023-12-07 15:54:14,417 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-0-1
+2023-12-07 15:54:14,417 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-0-2
+2023-12-07 15:54:14,429 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 15:54:14,430 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 15:54:14,431 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 15:54:14,432 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 15:54:14,432 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 15:54:14,434 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 15:54:25,052 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 15:54:25,094 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 15:54:25,153 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 15:54:25,442 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 15:54:25,445 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 15:54:25,446 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 15:54:25,446 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701944665442
+2023-12-07 15:54:25,809 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 15:54:25,813 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 15:54:25,813 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 15:54:26,154 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 15:54:26,160 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 7 with epoch 0
+2023-12-07 15:54:26,230 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 15:54:26,307 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-3
+2023-12-07 15:54:26,307 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-4
+2023-12-07 15:54:26,307 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-5
+2023-12-07 15:54:26,318 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 15:54:26,318 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 15:54:26,319 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 15:54:26,319 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 15:54:26,319 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 15:54:26,320 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 15:54:33,985 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 15:54:34,025 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 15:54:34,066 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 15:54:34,264 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 15:54:34,272 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 15:54:34,273 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 15:54:34,273 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701944674266
+2023-12-07 15:54:34,793 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 15:54:34,794 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 8 with epoch 0
+2023-12-07 15:54:34,811 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 15:54:34,837 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-0-3
+2023-12-07 15:54:34,837 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-0-4
+2023-12-07 15:54:34,837 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-0-5
+2023-12-07 15:54:34,842 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 15:54:34,843 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 15:54:34,843 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 15:54:34,843 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 15:54:34,843 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 15:54:34,844 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 15:54:42,462 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 15:54:42,501 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 15:54:42,545 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 15:54:42,774 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 15:54:42,779 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 15:54:42,780 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 15:54:42,781 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701944682774
+2023-12-07 15:54:43,147 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 15:54:43,150 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 15:54:43,151 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 15:54:43,622 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 15:54:43,629 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 9 with epoch 0
+2023-12-07 15:54:43,710 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 15:54:43,767 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-0-6
+2023-12-07 15:54:43,768 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-0-7
+2023-12-07 15:54:43,768 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-0-8
+2023-12-07 15:54:43,778 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 15:54:43,778 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 15:54:43,778 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 15:54:43,779 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 15:54:43,779 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 15:54:43,780 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 15:55:21,950 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 15:55:21,993 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 15:55:22,044 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 15:55:22,291 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 15:55:22,294 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 15:55:22,295 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 15:55:22,295 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701944722291
+2023-12-07 15:55:22,681 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 15:55:22,685 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 15:55:22,686 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 15:55:23,156 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 15:55:23,162 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 10 with epoch 0
+2023-12-07 15:55:23,217 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 15:55:23,262 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-6
+2023-12-07 15:55:23,262 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-7
+2023-12-07 15:55:23,262 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-8
+2023-12-07 15:55:23,274 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 15:55:23,274 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 15:55:23,274 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 15:55:23,276 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 15:55:23,276 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 15:55:23,277 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 15:55:32,726 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 15:55:32,766 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 15:55:32,813 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 15:55:33,067 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 15:55:33,071 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 15:55:33,071 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 15:55:33,071 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701944733068
+2023-12-07 15:55:33,511 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 15:55:33,514 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 15:55:33,514 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 15:55:34,020 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 15:55:34,026 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 11 with epoch 0
+2023-12-07 15:55:34,091 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 15:55:34,202 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-0-9
+2023-12-07 15:55:34,203 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-0-10
+2023-12-07 15:55:34,203 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-0-11
+2023-12-07 15:55:34,219 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 15:55:34,219 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 15:55:34,220 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 15:55:34,221 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 15:55:34,221 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 15:55:34,222 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 15:55:41,478 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 15:55:41,515 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 15:55:41,560 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 15:55:41,796 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 15:55:41,799 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 15:55:41,801 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 15:55:41,801 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701944741796
+2023-12-07 15:55:42,103 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 15:55:42,106 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 15:55:42,107 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 15:55:42,266 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 15:55:42,267 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 12 with epoch 0
+2023-12-07 15:55:42,283 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 15:55:42,319 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-9
+2023-12-07 15:55:42,319 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-10
+2023-12-07 15:55:42,319 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-11
+2023-12-07 15:55:42,327 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 15:55:42,327 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 15:55:42,327 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 15:55:42,328 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 15:55:42,328 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 15:55:42,329 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 15:55:50,761 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 15:55:50,934 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 15:55:51,216 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 15:55:51,433 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 15:55:51,437 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 15:55:51,438 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 15:55:51,438 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701944751434
+2023-12-07 15:55:51,776 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 15:55:51,780 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 15:55:51,780 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 15:55:52,174 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 15:55:52,178 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 13 with epoch 0
+2023-12-07 15:55:52,222 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 15:55:52,264 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-12
+2023-12-07 15:55:52,265 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-13
+2023-12-07 15:55:52,265 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries-1-14
+2023-12-07 15:55:52,273 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 15:55:52,274 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 15:55:52,274 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 15:55:52,274 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 15:55:52,274 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 15:55:52,276 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 16:03:10,736 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 16:03:10,777 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 16:03:10,824 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 16:03:11,050 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 16:03:11,057 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:03:11,057 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:03:11,058 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701945191051
+2023-12-07 16:03:11,411 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 16:03:11,415 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 16:03:11,415 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 16:03:11,817 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:03:11,822 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 14 with epoch 0
+2023-12-07 16:03:11,864 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 16:03:11,893 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-0
+2023-12-07 16:03:11,893 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-1
+2023-12-07 16:03:11,893 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-2
+2023-12-07 16:03:11,900 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:03:11,900 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:03:11,900 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:03:11,901 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 16:03:11,901 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 16:03:11,901 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 16:03:17,049 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 16:03:17,087 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 16:03:17,133 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 16:03:17,351 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 16:03:17,359 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:03:17,359 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:03:17,360 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701945197353
+2023-12-07 16:03:17,814 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:03:17,816 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 15 with epoch 0
+2023-12-07 16:03:17,833 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 16:03:17,861 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-3
+2023-12-07 16:03:17,861 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-4
+2023-12-07 16:03:17,861 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-5
+2023-12-07 16:03:17,868 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:03:17,868 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:03:17,868 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:03:17,869 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 16:03:17,869 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 16:03:17,870 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 16:03:23,175 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 16:03:23,212 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 16:03:23,260 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 16:03:23,539 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 16:03:23,554 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:03:23,555 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:03:23,556 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701945203540
+2023-12-07 16:03:23,940 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 16:03:23,944 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 16:03:23,944 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 16:03:24,114 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:03:24,115 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 16 with epoch 0
+2023-12-07 16:03:24,133 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 16:03:24,166 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-6
+2023-12-07 16:03:24,166 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-7
+2023-12-07 16:03:24,166 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-8
+2023-12-07 16:03:24,181 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:03:24,182 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:03:24,182 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:03:24,183 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 16:03:24,183 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 16:03:24,185 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 16:18:23,213 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 16:18:23,273 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 16:18:23,331 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 16:18:23,568 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 16:18:23,572 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:18:23,572 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:18:23,572 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701946103568
+2023-12-07 16:18:23,944 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 16:18:23,947 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 16:18:23,948 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 16:18:24,381 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:18:24,387 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 17 with epoch 0
+2023-12-07 16:18:24,449 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 16:18:24,516 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-9
+2023-12-07 16:18:24,517 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-10
+2023-12-07 16:18:24,517 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-11
+2023-12-07 16:18:24,532 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:18:24,532 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:18:24,533 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:18:24,533 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 16:18:24,534 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 16:18:24,535 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 16:18:30,286 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{retries=3, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 16:18:30,334 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 16:18:30,384 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 16:18:30,640 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 16:18:30,646 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:18:30,646 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:18:30,647 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701946110640
+2023-12-07 16:18:31,147 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 16:18:31,149 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 16:18:31,149 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 16:18:31,514 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:18:31,515 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 18 with epoch 0
+2023-12-07 16:18:31,533 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 16:18:31,562 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-12
+2023-12-07 16:18:31,562 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-13
+2023-12-07 16:18:31,562 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-14
+2023-12-07 16:18:31,570 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:18:31,570 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:18:31,570 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:18:31,571 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 16:18:31,571 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 16:18:31,572 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 16:20:46,602 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-email-group-7-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = email-group-7
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.maveric.deliveryms.DeliveryMessageDeserializer
+
+2023-12-07 16:20:46,930 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - These configurations '[retries, value.serializer, acks, key.serializer]' were supplied but are not used yet.
+2023-12-07 16:20:46,933 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:20:46,934 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:20:46,934 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701946246931
+2023-12-07 16:20:46,940 [main] INFO     org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Subscribed to topic(s): deliveries2
+2023-12-07 16:20:47,306 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:20:48,423 [main] INFO     org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:20:48,425 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Discovered group coordinator MAVHP122044.mavericsystems.lan:9092 (id: 2147483647 rack: null)
+2023-12-07 16:20:48,432 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] (Re-)joining group
+2023-12-07 16:20:48,445 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Request joining group due to: need to re-join with the given member-id: consumer-email-group-7-1-84a55c24-af6f-4759-a9f9-436a09db91d9
+2023-12-07 16:20:48,445 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-12-07 16:20:48,445 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] (Re-)joining group
+2023-12-07 16:20:48,450 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Successfully joined group with generation Generation{generationId=1, memberId='consumer-email-group-7-1-84a55c24-af6f-4759-a9f9-436a09db91d9', protocol='range'}
+2023-12-07 16:20:48,459 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Finished assignment for group at generation 1: {consumer-email-group-7-1-84a55c24-af6f-4759-a9f9-436a09db91d9=Assignment(partitions=[deliveries2-0])}
+2023-12-07 16:20:48,468 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Successfully synced group in generation Generation{generationId=1, memberId='consumer-email-group-7-1-84a55c24-af6f-4759-a9f9-436a09db91d9', protocol='range'}
+2023-12-07 16:20:48,469 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Notifying assignor about the new Assignment(partitions=[deliveries2-0])
+2023-12-07 16:20:48,472 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Adding newly assigned partitions: deliveries2-0
+2023-12-07 16:20:48,482 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Found no committed offset for partition deliveries2-0
+2023-12-07 16:20:48,496 [main] INFO     org.apache.kafka.clients.consumer.internals.SubscriptionState - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Resetting offset for partition deliveries2-0 to position FetchPosition{offset=15, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[MAVHP122044.mavericsystems.lan:9092 (id: 0 rack: null)], epoch=0}}.
+2023-12-07 16:20:48,523 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:20:49,738 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:20:50,953 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:20:52,170 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:20:53,385 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:20:54,601 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:20:55,819 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:20:57,032 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:20:58,249 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:20:59,462 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:00,678 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:01,040 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{key.deserializer=org.apache.kafka.common.serialization.StringDeserializer, retries=3, value.deserializer=com.maveric.deliveryms.DeliveryMessageDeserializer, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, group.id=email-group-7, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 16:21:01,095 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 16:21:01,153 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 16:21:01,382 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[key.deserializer, value.deserializer, group.id, session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 16:21:01,386 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:21:01,386 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:21:01,387 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701946261382
+2023-12-07 16:21:01,879 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:21:01,881 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 19 with epoch 0
+2023-12-07 16:21:01,898 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:01,900 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 16:21:01,925 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-15
+2023-12-07 16:21:01,926 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-16
+2023-12-07 16:21:01,926 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-17
+2023-12-07 16:21:01,933 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:21:01,933 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:21:01,933 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:21:01,933 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 16:21:01,933 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 16:21:01,934 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 16:21:02,949 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=3
+2023-12-07 16:21:02,949 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:21:02,949 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DISPATCHED
+2023-12-07 16:21:02,950 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:21:02,950 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-OUT_FOR_DELIVERY
+2023-12-07 16:21:02,950 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:21:02,950 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DELIVERED
+2023-12-07 16:21:04,159 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:05,374 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:06,588 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:07,340 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{key.deserializer=org.apache.kafka.common.serialization.StringDeserializer, retries=3, value.deserializer=com.maveric.deliveryms.DeliveryMessageDeserializer, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, group.id=email-group-7, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 16:21:07,377 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 16:21:07,424 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 16:21:07,654 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[key.deserializer, value.deserializer, group.id, session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 16:21:07,660 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:21:07,661 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:21:07,661 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701946267654
+2023-12-07 16:21:07,806 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:07,969 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 16:21:07,972 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 16:21:07,973 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 16:21:08,131 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:21:08,132 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 20 with epoch 0
+2023-12-07 16:21:08,148 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 16:21:08,172 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-18
+2023-12-07 16:21:08,172 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-19
+2023-12-07 16:21:08,172 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-20
+2023-12-07 16:21:08,179 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:21:08,180 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:21:08,180 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:21:08,181 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 16:21:08,181 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 16:21:08,182 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 16:21:08,821 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=3
+2023-12-07 16:21:08,821 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:21:08,821 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DISPATCHED
+2023-12-07 16:21:08,821 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:21:08,822 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-OUT_FOR_DELIVERY
+2023-12-07 16:21:08,822 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:21:08,822 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DELIVERED
+2023-12-07 16:21:10,034 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:11,249 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:12,465 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:13,678 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:14,884 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:16,108 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:17,323 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:18,532 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:19,748 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:20,957 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:22,168 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:23,381 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:24,594 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:25,806 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:27,018 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:28,233 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:29,446 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:30,655 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:31,866 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:33,080 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:34,294 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:35,519 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:36,732 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:37,945 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:39,160 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:40,373 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:41,583 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:42,798 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:44,022 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:45,238 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:46,465 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:47,679 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:48,895 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:50,108 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:51,322 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:52,538 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:53,755 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:54,966 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:56,180 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:57,390 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:58,599 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:21:59,815 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:01,027 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:02,258 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:03,465 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:04,679 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:05,895 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:07,112 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:08,324 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:09,542 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:10,557 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Request joining group due to: group is already rebalancing
+2023-12-07 16:22:10,560 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Revoke previously assigned partitions deliveries2-0
+2023-12-07 16:22:10,560 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] (Re-)joining group
+2023-12-07 16:22:10,563 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Successfully joined group with generation Generation{generationId=2, memberId='consumer-email-group-7-1-84a55c24-af6f-4759-a9f9-436a09db91d9', protocol='range'}
+2023-12-07 16:22:10,563 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Finished assignment for group at generation 2: {consumer-email-group-7-1-84a55c24-af6f-4759-a9f9-436a09db91d9=Assignment(partitions=[]), c1-74550803-45fc-4579-9c90-88b13f641184=Assignment(partitions=[deliveries2-0])}
+2023-12-07 16:22:10,565 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Successfully synced group in generation Generation{generationId=2, memberId='consumer-email-group-7-1-84a55c24-af6f-4759-a9f9-436a09db91d9', protocol='range'}
+2023-12-07 16:22:10,565 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Notifying assignor about the new Assignment(partitions=[])
+2023-12-07 16:22:10,566 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Adding newly assigned partitions: 
+2023-12-07 16:22:10,759 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:11,972 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:13,186 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:14,399 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:15,627 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:16,840 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:18,050 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:19,267 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:20,484 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:21,702 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:22,913 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:24,127 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:25,340 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:26,566 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:27,784 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:29,001 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:30,216 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:31,431 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:32,648 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:33,860 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:35,070 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:36,283 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:37,493 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:38,704 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:39,923 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:41,138 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:22:42,350 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:23:00,079 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-email-group-7-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = email-group-7
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.maveric.deliveryms.DeliveryMessageDeserializer
+
+2023-12-07 16:23:00,423 [main] INFO     org.apache.kafka.clients.consumer.ConsumerConfig - These configurations '[retries, value.serializer, acks, key.serializer]' were supplied but are not used yet.
+2023-12-07 16:23:00,427 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:23:00,427 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:23:00,427 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701946380423
+2023-12-07 16:23:00,433 [main] INFO     org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Subscribed to topic(s): deliveries2
+2023-12-07 16:23:00,802 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:23:05,930 [main] INFO     org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:23:05,931 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Discovered group coordinator MAVHP122044.mavericsystems.lan:9092 (id: 2147483647 rack: null)
+2023-12-07 16:23:05,937 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] (Re-)joining group
+2023-12-07 16:23:05,950 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Request joining group due to: need to re-join with the given member-id: consumer-email-group-7-1-b5a4b874-4cfc-4d6e-9ff0-bf1ced5e53bb
+2023-12-07 16:23:05,950 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-12-07 16:23:05,951 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] (Re-)joining group
+2023-12-07 16:23:06,016 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:23:11,226 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:23:16,452 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:23:20,885 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{key.deserializer=org.apache.kafka.common.serialization.StringDeserializer, retries=3, value.deserializer=com.maveric.deliveryms.DeliveryMessageDeserializer, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, group.id=email-group-7, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 16:23:20,934 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 16:23:20,989 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 16:23:21,231 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[key.deserializer, value.deserializer, group.id, session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 16:23:21,235 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:23:21,235 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:23:21,235 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701946401231
+2023-12-07 16:23:21,658 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:23:21,753 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:23:21,754 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 21 with epoch 0
+2023-12-07 16:23:21,772 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 16:23:21,797 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-21
+2023-12-07 16:23:21,797 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-22
+2023-12-07 16:23:21,797 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-23
+2023-12-07 16:23:21,805 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:23:21,805 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:23:21,805 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:23:21,806 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 16:23:21,806 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 16:23:21,807 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 16:23:26,667 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Successfully joined group with generation Generation{generationId=3, memberId='consumer-email-group-7-1-b5a4b874-4cfc-4d6e-9ff0-bf1ced5e53bb', protocol='range'}
+2023-12-07 16:23:26,690 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Finished assignment for group at generation 3: {consumer-email-group-7-1-b5a4b874-4cfc-4d6e-9ff0-bf1ced5e53bb=Assignment(partitions=[deliveries2-0])}
+2023-12-07 16:23:26,698 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Successfully synced group in generation Generation{generationId=3, memberId='consumer-email-group-7-1-b5a4b874-4cfc-4d6e-9ff0-bf1ced5e53bb', protocol='range'}
+2023-12-07 16:23:26,698 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Notifying assignor about the new Assignment(partitions=[deliveries2-0])
+2023-12-07 16:23:26,702 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Adding newly assigned partitions: deliveries2-0
+2023-12-07 16:23:26,722 [main] INFO     org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-email-group-7-1, groupId=email-group-7] Setting offset for partition deliveries2-0 to the committed offset FetchPosition{offset=21, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[MAVHP122044.mavericsystems.lan:9092 (id: 0 rack: null)], epoch=0}}
+2023-12-07 16:23:26,775 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=3
+2023-12-07 16:23:26,775 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:23:26,776 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DISPATCHED
+2023-12-07 16:23:26,776 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:23:26,776 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-OUT_FOR_DELIVERY
+2023-12-07 16:23:26,776 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:23:26,776 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DELIVERED
+2023-12-07 16:23:31,988 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:23:37,204 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:23:42,410 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:23:47,622 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:23:52,837 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:23:58,046 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:24:03,266 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:24:07,938 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{key.deserializer=org.apache.kafka.common.serialization.StringDeserializer, retries=3, value.deserializer=com.maveric.deliveryms.DeliveryMessageDeserializer, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, group.id=email-group-7, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 16:24:08,010 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 16:24:08,069 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 16:24:08,252 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[key.deserializer, value.deserializer, group.id, session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 16:24:08,256 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:24:08,257 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:24:08,257 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701946448253
+2023-12-07 16:24:08,479 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:24:08,566 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 16:24:08,569 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 16:24:08,569 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 16:24:08,746 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:24:08,748 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 22 with epoch 0
+2023-12-07 16:24:08,767 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 16:24:08,796 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-24
+2023-12-07 16:24:08,797 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-25
+2023-12-07 16:24:08,797 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-26
+2023-12-07 16:24:08,803 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:24:08,804 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:24:08,804 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:24:08,804 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 16:24:08,805 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 16:24:08,805 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 16:24:13,496 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=3
+2023-12-07 16:24:13,496 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:24:13,497 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DISPATCHED
+2023-12-07 16:24:13,499 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:24:13,499 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-OUT_FOR_DELIVERY
+2023-12-07 16:24:13,500 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:24:13,501 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DELIVERED
+2023-12-07 16:24:18,730 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:24:23,943 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:24:28,128 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{key.deserializer=org.apache.kafka.common.serialization.StringDeserializer, retries=3, value.deserializer=com.maveric.deliveryms.DeliveryMessageDeserializer, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, group.id=email-group-7, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 16:24:28,181 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 16:24:28,234 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 16:24:28,405 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[key.deserializer, value.deserializer, group.id, session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 16:24:28,408 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:24:28,409 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:24:28,409 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701946468405
+2023-12-07 16:24:28,881 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:24:28,882 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 23 with epoch 0
+2023-12-07 16:24:28,897 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 16:24:28,926 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-27
+2023-12-07 16:24:28,927 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-28
+2023-12-07 16:24:28,927 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-29
+2023-12-07 16:24:28,935 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:24:28,935 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:24:28,935 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:24:28,936 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 16:24:28,936 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 16:24:28,938 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 16:24:28,952 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=3
+2023-12-07 16:24:28,952 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:24:28,952 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DISPATCHED
+2023-12-07 16:24:28,952 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:24:28,952 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-OUT_FOR_DELIVERY
+2023-12-07 16:24:28,952 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:24:28,952 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DELIVERED
+2023-12-07 16:24:34,162 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:24:39,371 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:24:44,587 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:24:49,798 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:24:55,003 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:25:00,217 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:25:05,432 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:25:05,819 [main] INFO     com.maveric.deliveryms.ProducerDemo - *****properties{key.deserializer=org.apache.kafka.common.serialization.StringDeserializer, retries=3, value.deserializer=com.maveric.deliveryms.DeliveryMessageDeserializer, value.serializer=com.maveric.deliveryms.DeliveryMessageSerializer, acks=all, group.id=email-group-7, bootstrap.servers=localhost:9092,localhost:9093, session.timeout.ms=45000, key.serializer=org.apache.kafka.common.serialization.StringSerializer}
+2023-12-07 16:25:05,863 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.maveric.deliveryms.DeliveryMessageSerializer
+
+2023-12-07 16:25:05,907 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-12-07 16:25:06,158 [main] INFO     org.apache.kafka.clients.producer.ProducerConfig - These configurations '[key.deserializer, value.deserializer, group.id, session.timeout.ms]' were supplied but are not used yet.
+2023-12-07 16:25:06,162 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2023-12-07 16:25:06,162 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2023-12-07 16:25:06,162 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1701946506159
+2023-12-07 16:25:06,487 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2023-12-07 16:25:06,490 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -2 (localhost/127.0.0.1:9093) could not be established. Broker may not be available.
+2023-12-07 16:25:06,490 [kafka-producer-network-thread | producer-1] WARN     org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9093 (id: -2 rack: null) disconnected
+2023-12-07 16:25:06,878 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: 4GGxnDkqRgyffBUDGuf08Q
+2023-12-07 16:25:06,882 [kafka-producer-network-thread | producer-1] INFO     org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 24 with epoch 0
+2023-12-07 16:25:06,905 [main] INFO     org.apache.kafka.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+2023-12-07 16:25:06,933 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-30
+2023-12-07 16:25:06,933 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-31
+2023-12-07 16:25:06,933 [kafka-producer-network-thread | producer-1] INFO     com.maveric.deliveryms.ProducerDemo - record details topic=deliveries2-0-32
+2023-12-07 16:25:06,944 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-12-07 16:25:06,944 [main] INFO     org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-12-07 16:25:06,945 [main] INFO     org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-12-07 16:25:06,945 [main] INFO     org.apache.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-12-07 16:25:06,945 [main] INFO     com.maveric.deliveryms.ProducerDemo - bye
+2023-12-07 16:25:06,946 [Thread-0] INFO     com.maveric.deliveryms.ProducerDemo - ****producer exiting
+2023-12-07 16:25:10,453 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=3
+2023-12-07 16:25:10,454 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:25:10,454 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DISPATCHED
+2023-12-07 16:25:10,454 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:25:10,454 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-OUT_FOR_DELIVERY
+2023-12-07 16:25:10,454 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - ****iterating on records
+2023-12-07 16:25:10,454 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - sending mail for delivery message=order8-DELIVERED
+2023-12-07 16:25:15,659 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:25:20,870 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:25:26,087 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:25:31,302 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:25:36,510 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:25:41,727 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:25:46,936 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:25:52,152 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:25:57,365 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:26:02,594 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:26:07,808 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:26:13,021 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:26:18,234 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:26:23,449 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:26:28,664 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:26:33,874 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:26:39,081 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:26:44,299 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:26:49,522 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:26:54,726 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:26:59,932 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:27:05,141 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:27:10,354 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:27:15,573 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:27:20,778 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:27:25,994 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:27:31,208 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:27:36,424 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:27:41,635 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:27:46,847 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:27:52,055 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:27:57,271 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:28:02,486 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:28:07,691 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:28:12,907 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:28:18,120 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:28:23,339 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
+2023-12-07 16:28:28,544 [main] INFO     com.maveric.deliveryms.EmailConsumerDemo - *****records fetched=0
