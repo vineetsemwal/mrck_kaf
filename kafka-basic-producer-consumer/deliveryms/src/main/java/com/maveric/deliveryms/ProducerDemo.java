@@ -20,12 +20,12 @@ public class ProducerDemo {
 
     public static void main(String[] args) throws Exception {
         System.out.println("****starting kafka client");
-        Properties properties = KafkaPropertiesReader.read("application.properties");
+        Properties properties = KafkaPropertiesReader.read("remote_producer.properties");
       Log.info("*****properties"+properties);
         try(
         KafkaProducer<String, DeliveryMessage> producer = new KafkaProducer<>(properties);
         ) {
-            String orderID = "order9";
+            String orderID = "order10";
         /*
         Future<RecordMetadata> future = producer.send(record);
         RecordMetadata metaData = future.get();
@@ -35,7 +35,7 @@ public class ProducerDemo {
 
             for (DeliveryStatus status : DeliveryStatus.values()) {
                 DeliveryMessage msg = new DeliveryMessage(orderID, status);
-                ProducerRecord<String, DeliveryMessage> record = new ProducerRecord<>("deliveries", orderID, msg);
+                ProducerRecord<String, DeliveryMessage> record = new ProducerRecord<>("deliveries3", orderID, msg);
                 producer.send(record, (metaData, exception) -> {
                     if (exception != null) {
                         Log.error("exception in sending message-getting metadata", exception);

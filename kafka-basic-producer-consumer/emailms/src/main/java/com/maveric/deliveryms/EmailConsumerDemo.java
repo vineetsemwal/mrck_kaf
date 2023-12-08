@@ -16,11 +16,11 @@ import java.util.Properties;
 public class EmailConsumerDemo {
     private static final Logger Log= LoggerFactory.getLogger(EmailConsumerDemo.class);
     public static void main(String[] args) throws IOException,InterruptedException {
-        Properties properties=KafkaPropertiesReader.read("application.properties");
+        Properties properties=KafkaPropertiesReader.read("remote_consumer.properties");
         System.out.println("***properties="+properties);
 
         try(KafkaConsumer<String,DeliveryMessage>consumer=new KafkaConsumer<>(properties)){
-            consumer.subscribe(List.of("deliveries"));
+            consumer.subscribe(List.of("deliveries3"));
             while (true) {
                 ConsumerRecords<String, DeliveryMessage> records = consumer.poll(Duration.ofMillis(200));
                 Log.info("*****records fetched="+records.count());
@@ -28,6 +28,7 @@ public class EmailConsumerDemo {
                     Log.info("****iterating on records");
                     String key = iteratedRecord.key();
                     DeliveryMessage value = iteratedRecord.value();
+                    Log.info("partition="+iteratedRecord.partition());
                     sendMail(value);
 
                 }
