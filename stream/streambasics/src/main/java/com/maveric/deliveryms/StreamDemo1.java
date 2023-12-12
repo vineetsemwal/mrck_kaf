@@ -26,16 +26,22 @@ public class StreamDemo1 {
 
         Log.info("****properties"+properties);
         StreamsBuilder builder=new StreamsBuilder();
-        KStream<String,String>upperStream= builder.stream("input-words", Consumed.with(Serdes.String(),Serdes.String()))
-                .peek((key,value)-> Log.info("key="+key+"value="+value))
+        //source processor giving us stream from topic input-words
+        KStream<String,String>inputStream= builder.stream("input-words", Consumed.with(Serdes.String(),Serdes.String()));
+
+          KStream<String,String>upperStream    = inputStream .peek((key,value)-> Log.info("key="+key+"value="+value))
+          //intermediate map processor giving us new KStream<String,String> where key is string, value is message in uppercase
                 .mapValues((value)->value.toUpperCase())
                 .peek((key,value)-> System.out.println("key="+key+",value="+value));
 
-        upperStream.mapValues(value -> value.length())
+          //intermediate map processor giving us new KStream<String,Integer> where key is string, value is message length
+        inputStream.mapValues(value -> value.length())
                 .peek((key,value)-> System.out.println("key="+key+",value="+value))
+           //sink processor sinking to topic words-length
                 .to("words-length",Produced.with(Serdes.String(),Serdes.Integer()));
 
-                upperStream.to("output-words", Produced.with(Serdes.String(), Serdes.String()));
+        //sink processor sinking to topics upper-words
+                upperStream.to("upper-words", Produced.with(Serdes.String(), Serdes.String()));
        Topology topology= builder.build();
        Log.info("*****topology="+topology.describe());
 
