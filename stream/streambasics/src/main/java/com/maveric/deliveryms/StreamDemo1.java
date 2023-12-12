@@ -30,7 +30,7 @@ public class StreamDemo1 {
                 .peek((key,value)-> Log.info("key="+key+"value="+value))
                 .mapValues((value)->value.toUpperCase())
                 .peek((key,value)-> System.out.println("key="+key+",value="+value));
-Inte
+
         upperStream.mapValues(value -> value.length())
                 .peek((key,value)-> System.out.println("key="+key+",value="+value))
                 .to("words-length",Produced.with(Serdes.String(),Serdes.Integer()));
