@@ -20,6 +20,7 @@ import java.util.Properties;
 public class StreamDemo1 {
     private static final Logger Log = LoggerFactory.getLogger(StreamDemo1.class);
 
+
     public static void main(String[] args) throws Exception {
 
         Properties properties = KafkaPropertiesReader.read("application.properties");
@@ -36,10 +37,11 @@ public class StreamDemo1 {
                 .mapValues((value) -> value.toUpperCase())
                 .peek((key, value) -> System.out.println("key=" + key + ",value=" + value));
         //sink processor sinking to topics upper-words
-        upperStream.to("upper-words", Produced.with(Serdes.String(), Serdes.String()));
+        upperStream.to("upper-words");
 
         //intermediate map processor giving us new KStream<String,Integer> where key is string, value is message length
         inputStream.mapValues(value -> value.length())
+
                 .peek((key, value) -> System.out.println("key=" + key + ",value=" + value))
                 //sink processor sinking to topic words-length
                 .to("words-length", Produced.with(Serdes.String(), Serdes.Integer()));
@@ -50,15 +52,15 @@ public class StreamDemo1 {
 
         try (KafkaStreams streams = new KafkaStreams(topology, properties)) {
             streams.start();
-            Thread.sleep(10000000);
-
-        }
-
-
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            Log.info("*** application closed");
-        }));
+            Thread.sleep(Long.MAX_VALUE);
 
     }
+
+
+        Runtime.getRuntime().addShutdownHook(new Thread(() ->  {
+        Log.info("*** application closed");
+    }));
+
+}
 
 }
