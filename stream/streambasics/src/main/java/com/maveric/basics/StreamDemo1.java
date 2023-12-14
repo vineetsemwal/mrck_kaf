@@ -1,6 +1,6 @@
-package com.maveric.deliveryms;
+package com.maveric.basics;
 
-import org.apache.kafka.common.serialization.Serde;
+import com.maveric.deliveryms.KafkaPropertiesReader;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
@@ -12,8 +12,6 @@ import org.apache.kafka.streams.kstream.Produced;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
-import java.time.Duration;
 import java.util.Properties;
 
 // Serde Serializer-Deserializer

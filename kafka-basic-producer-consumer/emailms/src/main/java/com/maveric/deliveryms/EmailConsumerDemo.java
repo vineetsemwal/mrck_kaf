@@ -16,13 +16,15 @@ import java.util.Properties;
 public class EmailConsumerDemo {
     private static final Logger Log= LoggerFactory.getLogger(EmailConsumerDemo.class);
     public static void main(String[] args) throws IOException,InterruptedException {
-        Properties properties=KafkaPropertiesReader.read("remote_consumer.properties");
+        Properties properties=KafkaPropertiesReader.read("application.properties");
         System.out.println("***properties="+properties);
 
         try(KafkaConsumer<String,DeliveryMessage>consumer=new KafkaConsumer<>(properties)){
-            consumer.subscribe(List.of("deliveries3"));
+            consumer.subscribe(List.of("delivered"));
+
             while (true) {
-                ConsumerRecords<String, DeliveryMessage> records = consumer.poll(Duration.ofMillis(200));
+                ConsumerRecords<String, DeliveryMessage> records = consumer.poll(Duration.ofMillis(250));
+
                 Log.info("*****records fetched="+records.count());
                 for (ConsumerRecord<String, DeliveryMessage> iteratedRecord : records) {
                     Log.info("****iterating on records");
@@ -31,10 +33,16 @@ public class EmailConsumerDemo {
                     Log.info("partition="+iteratedRecord.partition());
                     sendMail(value);
 
+
                 }
+                //consumer.commitAsync();
                 Thread.sleep(5000);
             }
 
+
+        }catch (Exception e){
+            System.out.println("**************exception");
+            e.printStackTrace();
         }
     }
 

@@ -1,5 +1,6 @@
-package com.maveric.deliveryms;
+package com.maveric.basics;
 
+import com.maveric.deliveryms.KafkaPropertiesReader;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
@@ -11,11 +12,13 @@ import org.apache.kafka.streams.kstream.Produced;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Properties;
 
 // Serde Serializer-Deserializer
-public class StreamDemo3 {
-    private static final Logger Log = LoggerFactory.getLogger(StreamDemo3.class);
+public class StreamDemo4 {
+    private static final Logger Log = LoggerFactory.getLogger(StreamDemo4.class);
 
     private static boolean stop = false;
 
@@ -26,17 +29,15 @@ public class StreamDemo3 {
         properties.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         StreamsBuilder builder = new StreamsBuilder();
         //source processor giving us stream from topic input-words
-        KStream<String, String> inputStream = builder.stream("string-number", Consumed.with(Serdes.String(), Serdes.String()));
+        KStream<String, String> inputStream = builder.stream("csv", Consumed.with(Serdes.String(), Serdes.String()));
+       KStream<String,String>flatted =inputStream.flatMapValues((value) ->{
+                    String parts[]=value.split(",");
+                    List<String> partsList=Arrays.asList(parts);
+                    return partsList;
+        } );
 
-        KStream<String, String> numberStream = inputStream.filter((key, value) -> isNumber(value));
-        KStream<String, Integer> mappedInteger = numberStream.mapValues((key, value) -> Integer.parseInt(value));
-        mappedInteger
-                .peek((key, value) -> System.out.println("***before sinking to numbers topic key=" + key + "-value=" + value))
-                .to("numbers", Produced.with(Serdes.String(), Serdes.Integer()));
-
-        KStream<String, String> textStream = inputStream.filter((key, value) -> !isNumber(value))
-                .peek((key, value) -> System.out.println("***before sinking to strings topic key=" + key + "-value=" + value));
-        textStream.to("strings", Produced.with(Serdes.String(), Serdes.String()));
+        flatted.peek(((key, value) -> System.out.println("key="+key+"value="+value)))
+                .to("flatted",Produced.with(Serdes.String(),Serdes.String()));
 
 
         Topology topology = builder.build();

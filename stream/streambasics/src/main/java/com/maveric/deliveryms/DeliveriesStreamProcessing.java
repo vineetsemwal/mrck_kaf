@@ -14,8 +14,8 @@ import org.slf4j.LoggerFactory;
 import java.util.Properties;
 
 // Serde Serializer-Deserializer
-public class StreamDemo2 {
-    private static final Logger Log = LoggerFactory.getLogger(StreamDemo2.class);
+public class DeliveriesStreamProcessing {
+    private static final Logger Log = LoggerFactory.getLogger(DeliveriesStreamProcessing.class);
 
     private static boolean stop = false;
 
@@ -23,18 +23,18 @@ public class StreamDemo2 {
 
         Properties properties = KafkaPropertiesReader.read("application.properties");
         properties.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
-        properties.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
+        properties.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, DeliveryMessageSerde.class);
         StreamsBuilder builder = new StreamsBuilder();
         //source processor giving us stream from topic input-words
-        KStream<String, String> inputStream = builder.stream("input-words", Consumed.with(Serdes.String(), Serdes.String()));
-        //intermediate processor gives another stream
-        //inputStream.peek((key,value)->Log.info("peeking key="+key+"value="+value))
-        KStream<String, String> upperStream = inputStream.mapValues(value -> value.toUpperCase());
-        //sink processor, sinking the events/messages to topic, terminal operation, does NOT give another stream
-        upperStream.to("output-words", Produced.with(Serdes.String(), Serdes.String()));
+        KStream<String, DeliveryMessage> inputStream = builder.stream("deliveries", Consumed.with(Serdes.String(),new DeliveryMessageSerde() ));
 
-        KStream<String, Integer> lengthStream = inputStream.mapValues(value -> value.length());
-        lengthStream.to("words-length", Produced.with(Serdes.String(),Serdes.Integer() ));
+        KStream<String,DeliveryMessage>delivered=inputStream.filter((key,msg)->msg.getStatus()==DeliveryStatus.DELIVERED);
+        delivered.peek((key,msg)->Log.info("***before sinking to delivered topic key="+key+"msg="+msg))
+        .to("delivered");
+
+       KStream<String,DeliveryMessage>dispatched =inputStream.filter((key,msg)->msg.getStatus()==DeliveryStatus.DISPATCHED);
+                       dispatched.peek((key,msg)->Log.info("***before sinking to dispatched topic key="+key+"msg="+msg))
+                       .to("dispatched");
 
         Topology topology = builder.build();
         Log.info("topology" + topology.describe());
@@ -52,6 +52,15 @@ public class StreamDemo2 {
 
         }));
 
+    }
+
+    static boolean isNumber(String text) {
+        try {
+            int number = Integer.parseInt(text);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
 }
