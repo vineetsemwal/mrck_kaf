@@ -6,15 +6,18 @@ import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.Topology;
-import org.apache.kafka.streams.kstream.*;
+import org.apache.kafka.streams.kstream.KGroupedStream;
+import org.apache.kafka.streams.kstream.KStream;
+import org.apache.kafka.streams.kstream.KTable;
+import org.apache.kafka.streams.kstream.Produced;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
 // Serde Serializer-Deserializer
-public class GroupingDemo {
-    private static final Logger Log = LoggerFactory.getLogger(GroupingDemo.class);
+public class GroupingByValueDemo {
+    private static final Logger Log = LoggerFactory.getLogger(GroupingByValueDemo.class);
 
     private static boolean stop = false;
 
@@ -26,11 +29,14 @@ public class GroupingDemo {
         StreamsBuilder builder = new StreamsBuilder();
         //source processor giving us stream from topic csv
         KStream<String, String> inputStream = builder.stream("stream-input");
-        KGroupedStream<String,String>groupedStream=inputStream.groupByKey();
+        KGroupedStream<String,String>groupedStream=inputStream.groupBy((key,value)->{
+            //new key, in our case value is the new key
+            return value;
+        });
         KTable<String,Long>countTable=groupedStream.count();
         KStream<String,Long>outStream=countTable.toStream();
         outStream.peek((key,value)-> System.out.println("outstream peek, key="+key+" count="+value))
-                .to("messages-key-count");
+                .to("messages-value-count", Produced.with(Serdes.String(),Serdes.Long()));
 
         Topology topology = builder.build();
         Log.info("topology" + topology.describe());
