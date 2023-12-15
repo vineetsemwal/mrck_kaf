@@ -10,13 +10,11 @@ import org.apache.kafka.streams.kstream.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Properties;
 
 // Serde Serializer-Deserializer
-public class StreamDemo5 {
-    private static final Logger Log = LoggerFactory.getLogger(StreamDemo5.class);
+public class BasicTableDemo {
+    private static final Logger Log = LoggerFactory.getLogger(BasicTableDemo.class);
 
     private static boolean stop = false;
 
