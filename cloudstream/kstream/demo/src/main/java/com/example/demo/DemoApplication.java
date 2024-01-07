@@ -12,6 +12,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.context.annotation.Bean;
+import org.springframework.messaging.support.MessageBuilder;
 
 import java.util.Arrays;
 import java.util.List;
@@ -30,6 +31,7 @@ public class DemoApplication {
     public Serde<String> stringSerde() {
         return Serdes.String();
     }
+
 
     @Bean
     public Serde<DeliveryMessage> deliverySerde() {
@@ -78,14 +80,13 @@ public class DemoApplication {
     public Function<KStream<String, DeliveryMessage>, KStream<String, DeliveryMessage>> filterDeliveries() {
         Function<KStream<String, DeliveryMessage>, KStream<String, DeliveryMessage>> function = (inputStream) -> {
             KStream<String, DeliveryMessage> filtered = inputStream
-                    .peek((orderId,deliveryMsg)-> System.out.println("messages comming in key="+orderId+"value="+deliveryMsg))
+                    .peek((orderId, deliveryMsg) -> System.out.println("messages comming in key=" + orderId + "value=" + deliveryMsg))
                     .filter((orderId, deliverMsg) -> deliverMsg.getStatus().equals(DeliveryStatus.DELIVERED));
-            return filtered.peek((orderId,deliveryMsg)->{
-                System.out.println("after filter key="+orderId+"value="+deliveryMsg);
+            return filtered.peek((orderId, deliveryMsg) -> {
+                System.out.println("after filter key=" + orderId + "value=" + deliveryMsg);
             });
         };
         return function;
     }
-
 
 }
