@@ -29,7 +29,6 @@ public class DemoController {
         System.out.println("msg="+msg);
        Message<DeliveryMessage>message= MessageBuilder.withPayload(msg)
                 .setHeader(KafkaHeaders.KEY,msg.getOrderID().getBytes())
-               .setHeader(MessageHeaders.CONTENT_TYPE,"application/text")
                         .build();
 
         bridge.send("deliveries-out-0",message);

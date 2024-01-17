@@ -20,11 +20,13 @@ public class HelloController {
     }
     @PostMapping("/msg")
     public void sendMsg(@RequestBody String msgText) {
-        //bridge.send("bridgeDemo-out-0", msgText);
+      //  bridge.send("bridgeDemo-out-0", msgText);
+
         Message<String>message=MessageBuilder.withPayload(msgText)
-                .setHeader(KafkaHeaders.KEY,msgText)
-                        .build();
+                        .setHeader(KafkaHeaders.KEY,msgText.getBytes())
+                .build();
         bridge.send("bridgeDemo-out-0",message);
+
     }
 
 }

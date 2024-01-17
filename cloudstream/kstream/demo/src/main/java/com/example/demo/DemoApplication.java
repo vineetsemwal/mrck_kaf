@@ -5,15 +5,15 @@ import com.example.demo.deliveryms.DeliveryMessageSerde;
 import com.example.demo.deliveryms.DeliveryStatus;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
-import org.apache.kafka.streams.kstream.Consumed;
-import org.apache.kafka.streams.kstream.KStream;
-import org.apache.kafka.streams.kstream.Produced;
+import org.apache.kafka.streams.kstream.*;
+import org.apache.kafka.streams.kstream.internals.TimeWindow;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.context.annotation.Bean;
 import org.springframework.messaging.support.MessageBuilder;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
@@ -88,5 +88,23 @@ public class DemoApplication {
         };
         return function;
     }
+
+    @Bean
+    public Serde<Windowed<String>>windowedStringSerde(){
+        return WindowedSerdes.timeWindowedSerdeFrom(String.class,1);
+    }
+
+    @Bean
+    public Function<KStream<String,String>,KStream<Windowed<String>,Long>>wordsCountByKeyInWindow(){
+        Function<KStream<String,String>,KStream<Windowed<String>,Long>>function=inputStream->
+                inputStream
+                        .groupByKey()
+                        .windowedBy(TimeWindows.ofSizeWithNoGrace(Duration.ofMinutes(1)))
+                        .count().toStream()
+                        .peek((windowKey,value)-> System.out.println("key="+windowKey.key()+" value="+value));
+        return function;
+
+    }
+
 
 }
