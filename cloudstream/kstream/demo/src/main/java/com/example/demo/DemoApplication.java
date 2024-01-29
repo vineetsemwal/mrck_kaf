@@ -5,6 +5,7 @@ import com.example.demo.deliveryms.DeliveryMessageSerde;
 import com.example.demo.deliveryms.DeliveryStatus;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serdes;
+import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.kstream.*;
 import org.apache.kafka.streams.kstream.internals.TimeWindow;
 import org.springframework.boot.SpringApplication;
@@ -94,17 +95,24 @@ public class DemoApplication {
         return WindowedSerdes.timeWindowedSerdeFrom(String.class,1);
     }
 
+    /**
+     *  aggregrate on key on time window of 30 minute, adding serde for window separately
+     *
+     */
     @Bean
-    public Function<KStream<String,String>,KStream<Windowed<String>,Long>>wordsCountByKeyInWindow(){
-        Function<KStream<String,String>,KStream<Windowed<String>,Long>>function=inputStream->
+    public Function<KStream<String,String>,KStream<String,Long>>wordsCountByKeyInWindow(){
+        KeyValueMapper<Windowed<String>,Long,KeyValue<String,Long>>mapper=(windowKey,value)->new KeyValue<>(windowKey.key(),value);
+        Function<KStream<String,String>,KStream<String,Long>>function=inputStream->
                 inputStream
                         .groupByKey()
                         .windowedBy(TimeWindows.ofSizeWithNoGrace(Duration.ofMinutes(1)))
                         .count().toStream()
-                        .peek((windowKey,value)-> System.out.println("key="+windowKey.key()+" value="+value));
+                        .map(mapper)
+                        .peek((key,value)-> System.out.println("key="+key+" value="+value));
         return function;
 
     }
+
 
 
 }
